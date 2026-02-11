@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState, useRef } from 'react'
 import deriverse from '../services/deriverse'
-import dynamicMock from '../mock/dynamicMock'
+import { startDynamicMock } from '../mock/dynamicMock'
 import useTradingStore from '../store/tradingStore'
 
 /**
@@ -39,7 +39,7 @@ export function useTradingData({ poll = false, interval = 15000 } = {}) {
 
   useEffect(() => {
     // Ensure dynamic mock is started when component mounts (client-side only)
-    dynamicMock.startDynamicMock({ interval: 5000 })
+    startDynamicMock({ interval: 5000 })
 
     load()
     if (!poll) return
