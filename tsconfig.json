@@ -16,6 +16,17 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": "./",
+    "paths": {
+      "@/components/*": ["src/components/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/store/*": ["src/store/*"],
+      "@/services/*": ["src/services/*"],
+      "@/types/*": ["src/types/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/mock/*": ["src/mock/*"],
+      "@/providers": ["providers.tsx"]
+    },
     "noEmit": true,
     "esModuleInterop": true,
     "plugins": [
