@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --glass: rgba(255,255,255,0.04);
+  --accent: #00e5ff;
+  --bg-1: #00040a;
+  --bg-2: #071126;
+  --muted: rgba(255,255,255,0.45);
+  --pos: #22c55e;
+  --neg: #fb7185;
+}
+
+html,body,#root{height:100%}
+
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 6px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+  border-radius: 12px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+
+.bg-card {
+  background: linear-gradient(180deg, rgba(6,7,13,0.6), rgba(8,10,16,0.4));
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.card:hover{transform:translateY(-6px); box-shadow: 0 14px 40px rgba(2,6,23,0.8)}
+
+.sparkline{height:28px}
+
+/* utility tokens for consistent spacings and accent usage */
+.accent { color: var(--accent); }
+.positive { color: var(--pos); }
+.negative { color: var(--neg); }
+
+/* small shimmer skeleton */
+.skeleton{background:linear-gradient(90deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.04) 50%, rgba(255,255,255,0.02) 100%); background-size:200% 100%; animation: shimmer 1.4s infinite}
+@keyframes shimmer{from{background-position:200% 0} to{background-position:-200% 0}}
